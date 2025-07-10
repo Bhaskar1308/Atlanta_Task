@@ -24,19 +24,45 @@ A full-stack Laravel 10 project to manage your team members using **AJAX**, **Ya
 - **AJAX**
 - **MySQL**
 
----
 
-## 📸 Screenshots
-
-![UI](screenshots/table-ui.png)
-![Modal](screenshots/form-modal.png)
-
----
-
-## ⚙️ Installation Steps
-
-### 1. Clone the Repository
-
-```bash
+Installation Steps
+✅ 1. Clone the Repository
+bash
+Copy
+Edit
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
+
+
+✅ 2. Install PHP Dependencies
+Make sure you have Composer installed.
+
+bash
+Copy
+Edit
+
+
+composer install
+✅ 3. Setup Environment & App Key
+bash
+cp .env.example .env
+php artisan key:generate
+🔧 Update your .env file with your database credentials:
+
+env
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+
+✅ 4. Run Migrations
+bash
+php artisan migrate
+This will create the necessary tables in your database.
+
+✅ 5. Start the Local Development Server
+bash
+php artisan serve
+Visit the application at: http://localhost:8000/
+
+
